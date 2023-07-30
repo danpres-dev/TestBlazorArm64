@@ -19,9 +19,9 @@ EXPOSE 443
 
 
 
-COPY ./TestBlazorArm64/bin/Release/net7.0 /app/
+COPY ./TestBlazorArm64/bin/Release/net7.0/ /app/
 
-#COPY ./bin/Release/net7.0/publish /app/
+#COPY ./bin/Release/net7.0/publish/ /app/
 
 ENTRYPOINT ["dotnet", "TestBlazorArm64.dll"]
 
