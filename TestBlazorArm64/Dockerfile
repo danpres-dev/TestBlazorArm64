@@ -8,20 +8,12 @@
 # per linux
 FROM mcr.microsoft.com/dotnet/aspnet:7.0-jammy AS base
  
-
-
-
 WORKDIR /app
 EXPOSE 80
 EXPOSE 443
 
-
-
-
-
-COPY ./TestBlazorArm64/bin/Release/net7.0/ /app/
-
-#COPY ./bin/Release/net7.0/publish/ /app/
+#COPY ./TestBlazorArm64/bin/Release/net7.0/ /app/
+COPY ./bin/Release/net7.0/publish/ /app/
 
 ENTRYPOINT ["dotnet", "TestBlazorArm64.dll"]
 
